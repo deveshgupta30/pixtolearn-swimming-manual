@@ -251,7 +251,7 @@ const englishContent = {
         postcode: 'WC2H 9JQ',
         country: 'UK'
       },
-      website: 'www.pixtolearn.com',
+      website: 'pixtolearn.com',
       email: 'hello@pixtolearn.com'
     }
   }

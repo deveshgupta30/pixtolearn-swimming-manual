@@ -2,6 +2,10 @@
   "name": "pixtolearn-client",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
   "dependencies": {
     "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
@@ -20,8 +24,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:analyze": "npm run build && npx source-map-explorer 'build/static/js/*.js'",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:ci": "react-scripts test --watchAll=false --coverage",
+    "eject": "react-scripts eject",
+    "serve": "npx serve -s build -l 3000"
   },
   "eslintConfig": {
     "extends": [

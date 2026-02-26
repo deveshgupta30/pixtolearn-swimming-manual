@@ -74,8 +74,7 @@ const translationSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Index for faster queries
-translationSchema.index({ languageCode: 1 });
+// Index for faster queries (languageCode already has unique index from schema)
 translationSchema.index({ isEUOfficial: 1 });
 
 module.exports = mongoose.model('Translation', translationSchema);

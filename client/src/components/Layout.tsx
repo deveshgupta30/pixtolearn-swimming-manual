@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm no-print transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-20">
           <div className="flex items-center justify-between h-full">
-            <div className="flex items-center gap-3 group cursor-pointer">
+            <Link to="https://pixtolearn.com" className="flex items-center gap-3 group cursor-pointer">
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-primary-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
                 <img
@@ -21,10 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   className="relative h-10 w-auto transform group-hover:scale-105 transition duration-200"
                 />
               </div>
-              <span className="font-bold text-xl text-slate-800 tracking-tight hidden sm:block">
-                PixToLearn
-              </span>
-            </div>
+            </Link>
             <div className="text-right">
               <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
                 {t('swimmingInstructionManual')}
@@ -56,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </p>
                 <p className="flex items-center gap-2 hover:text-primary-400 transition-colors cursor-pointer">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                  www.pixtolearn.com
+                  pixtolearn.com
                 </p>
               </div>
             </div>

@@ -1,0 +1,45 @@
+services:
+  # MongoDB service
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    container_name: pixtolearn-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: pixtolearn-manual
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - pixtolearn-network
+
+  # Application service (Frontend + Backend combined)
+  app:
+    image: deveshgupta30/pixtolearn-manual:latest
+    container_name: pixtolearn-app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongodb:27017/pixtolearn-manual
+      - CORS_ORIGIN=*
+    depends_on:
+      - mongodb
+    networks:
+      - pixtolearn-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:5000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  pixtolearn-network:
+    driver: bridge

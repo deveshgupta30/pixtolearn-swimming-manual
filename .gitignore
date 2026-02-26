@@ -2,12 +2,14 @@
 node_modules/
 client/node_modules/
 server/node_modules/
+dev/
 
 # Environment variables
 .env
 .env.local
 .env.development
 .env.production
+.env.docker
 server/.env
 client/.env
 

@@ -382,7 +382,7 @@ REACT_APP_API_URL=http://localhost:5000
 - **Main Docs:** [README.md](./README.md)
 - **Quick Start:** [QUICKSTART.md](./QUICKSTART.md)
 - **Deployment:** [DEPLOYMENT.md](./DEPLOYMENT.md)
-- **Website:** www.pixtolearn.com
+- **Website:** pixtolearn.com
 - **Email:** hello@pixtolearn.com
 
 ## License

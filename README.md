@@ -420,7 +420,7 @@ Copyright © 2024 PixToLearn Ltd. All rights reserved.
 PixToLearn Ltd
 71–75 Shelton Street, Covent Garden
 London, WC2H 9JQ, UK
-- Website: www.pixtolearn.com
+- Website: pixtolearn.com
 - Email: hello@pixtolearn.com
 
 ## Support
