@@ -1,6 +1,6 @@
 {
   "name": "pixtolearn-manual",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multi-language instruction manual website for PixToLearn Swimming",
   "main": "server/server.js",
   "scripts": {
